@@ -1,6 +1,8 @@
 // merge two sorted list
 
 #include<iostream>
+#include<vector>
+#include<string>
 
 using namespace std;
 
@@ -42,6 +44,42 @@ public:
     }
 };
 
+// this is the zig zac one pattern question in readme .md
+
+class Solution2 {
+public:
+
+    string convert(string s, int numRows) {
+
+        vector <string> rows(min(numRows,(int)s.size()));
+        int currRow=0;
+        bool gowingDown=true;
+        for(auto c: s)
+        {
+            rows[currRow]+=c;
+            if(currRow==0)
+            {
+                gowingDown=true;
+            }
+            else if(currRow == numRows-1)
+            {
+                gowingDown=false;
+            }
+
+            currRow+= gowingDown ? 1 : -1;
+        }
+
+        string ans;
+
+        for(auto row :rows)
+        {
+            ans+=row;
+        }
+
+        return ans;
+
+    }
+};
 
 
 int main(){
