@@ -33,3 +33,7 @@ public:
         return ans;
     }
 };
+
+//Que 2
+
+
