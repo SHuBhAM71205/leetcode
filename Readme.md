@@ -274,3 +274,140 @@ Constraints:
 1 <= nums.length <= 1000
 0 <= nums[i] <= 1000
 All integers in nums are unique.
+
+# Day 7
+
+## QUestion 1
+A word is considered valid if:
+
+It contains a minimum of 3 characters.
+It contains only digits (0-9), and English letters (uppercase and lowercase).
+It includes at least one vowel.
+It includes at least one consonant.
+You are given a string word.
+
+Return true if word is valid, otherwise, return false.
+
+Notes:
+
+'a', 'e', 'i', 'o', 'u', and their uppercases are vowels.
+A consonant is an English letter that is not a vowel.
+ 
+
+Example 1:
+
+Input: word = "234Adas"
+
+Output: true
+
+Explanation:
+
+This word satisfies the conditions.
+
+Example 2:
+
+Input: word = "b3"
+
+Output: false
+
+Explanation:
+
+The length of this word is fewer than 3, and does not have a vowel.
+
+Example 3:
+
+Input: word = "a3$e"
+
+Output: false
+
+Explanation:
+
+This word contains a '$' character and does not have a consonant.
+
+ 
+
+Constraints:
+
+1 <= word.length <= 20
+word co
+
+# Day 8
+
+## QUestion 1
+You are given an integer array nums.
+A subsequence sub of nums with length x is called valid if it satisfies:
+
+(sub[0] + sub[1]) % 2 == (sub[1] + sub[2]) % 2 == ... == (sub[x - 2] + sub[x - 1]) % 2.
+Return the length of the longest valid subsequence of nums.
+
+A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
+
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,4]
+
+Output: 4
+
+Explanation:
+
+The longest valid subsequence is [1, 2, 3, 4].
+
+Example 2:
+
+Input: nums = [1,2,1,1,2,1,2]
+
+Output: 6
+
+Explanation:
+
+The longest valid subsequence is [1, 2, 1, 2, 1, 2].
+
+Example 3:
+
+Input: nums = [1,3]
+
+Output: 2
+
+Explanation:
+
+The longest valid subsequence is [1, 3].
+
+ 
+
+Constraints:
+
+2 <= nums.length <= 2 * 105
+1 <= nums[i] <= 107
+
+# DAy 9
+
+## Question 1
+
+Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
+
+The integer division should truncate toward zero, which means losing its fractional part. For example, 8.345 would be truncated to 8, and -2.7335 would be truncated to -2.
+
+Return the quotient after dividing dividend by divisor.
+
+Note: Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−231, 231 − 1]. For this problem, if the quotient is strictly greater than 231 - 1, then return 231 - 1, and if the quotient is strictly less than -231, then return -231.
+
+ 
+
+Example 1:
+
+Input: dividend = 10, divisor = 3
+Output: 3
+Explanation: 10/3 = 3.33333.. which is truncated to 3.
+Example 2:
+
+Input: dividend = 7, divisor = -3
+Output: -2
+Explanation: 7/-3 = -2.33333.. which is truncated to -2.
+ 
+
+Constraints:
+
+-231 <= dividend, divisor <= 231 - 1
+divisor != 0
