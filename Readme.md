@@ -469,3 +469,238 @@ Constraints:
 -104 <= nums[i] <= 104
 All values of nums are unique.
 nums is an ascending array t
+
+
+# DAy 12
+
+## Question 1
+
+The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
+
+countAndSay(1) = "1"
+countAndSay(n) is the run-length encoding of countAndSay(n - 1).
+Run-length encoding (RLE) is a string compression method that works by replacing consecutive identical characters (repeated 2 or more times) with the concatenation of the character and the number marking the count of the characters (length of the run). For example, to compress the string "3322251" we replace "33" with "23", replace "222" with "32", replace "5" with "15" and replace "1" with "11". Thus the compressed string becomes "23321511".
+
+Given a positive integer n, return the nth element of the count-and-say sequence.
+
+ 
+
+Example 1:
+
+Input: n = 4
+
+Output: "1211"
+
+Explanation:
+
+countAndSay(1) = "1"
+countAndSay(2) = RLE of "1" = "11"
+countAndSay(3) = RLE of "11" = "21"
+countAndSay(4) = RLE of "21" = "1211"
+Example 2:
+
+Input: n = 1
+
+Output: "1"
+
+Explanation:
+
+This is the base case.
+
+ 
+
+# DAy 13
+
+## Question 1
+
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return [-1, -1].
+
+You must write an algorithm with O(log n) runtime complexity.
+
+ 
+
+Example 1:
+
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+Example 2:
+
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+Example 3:
+
+Input: nums = [], target = 0
+Output: [-1,-1]
+
+
+
+# DAy 14
+
+## Question 1
+
+You are given an array of positive integers nums and want to erase a subarray containing unique elements. The score you get by erasing the subarray is equal to the sum of its elements.
+
+Return the maximum score you can get by erasing exactly one subarray.
+
+An array b is called to be a subarray of a if it forms a contiguous subsequence of a, that is, if it is equal to a[l],a[l+1],...,a[r] for some (l,r).
+
+ 
+
+Example 1:
+
+Input: nums = [4,2,4,5,6]
+Output: 17
+Explanation: The optimal subarray here is [2,4,5,6].
+Example 2:
+
+Input: nums = [5,2,1,2,5,2,1,2,5]
+Output: 8
+Explanation: The optimal subarray here is [5,2,1] or [1,2,5].
+ 
+
+# DAy 15
+
+## Question 1
+
+You are given a string s and two integers x and y. You can perform two types of operations any number of times.
+
+Remove substring "ab" and gain x points.
+For example, when removing "ab" from "cabxbae" it becomes "cxbae".
+Remove substring "ba" and gain y points.
+For example, when removing "ba" from "cabxbae" it becomes "cabxe".
+Return the maximum points you can gain after applying the above operations on s.
+
+ 
+
+Example 1:
+
+Input: s = "cdbcbbaaabab", x = 4, y = 5
+Output: 19
+Explanation:
+- Remove the "ba" underlined in "cdbcbbaaabab". Now, s = "cdbcbbaaab" and 5 points are added to the score.
+- Remove the "ab" underlined in "cdbcbbaaab". Now, s = "cdbcbbaa" and 4 points are added to the score.
+- Remove the "ba" underlined in "cdbcbbaa". Now, s = "cdbcba" and 5 points are added to the score.
+- Remove the "ba" underlined in "cdbcba". Now, s = "cdbc" and 5 points are added to the score.
+Total score = 5 + 4 + 5 + 5 = 19.
+Example 2:
+
+Input: s = "aabbaaxybbaabb", x = 5, y = 4
+Output: 20
+ 
+
+# DAy 16
+
+## Question 1
+
+Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+You must write an algorithm with O(log n) runtime complexity.
+
+ 
+
+Example 1:
+
+Input: nums = [1,3,5,6], target = 5
+Output: 2
+Example 2:
+
+Input: nums = [1,3,5,6], target = 2
+Output: 1
+Example 3:
+
+Input: nums = [1,3,5,6], target = 7
+Output: 4
+ 
+
+# DAy 17
+
+## Question 1
+
+You are given an integer array nums.
+
+You are allowed to delete any number of elements from nums without making it empty. After performing the deletions, select a subarray of nums such that:
+
+All elements in the subarray are unique.
+The sum of the elements in the subarray is maximized.
+Return the maximum sum of such a subarray.
+
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,4,5]
+
+Output: 15
+
+Explanation:
+
+Select the entire array without deleting any element to obtain the maximum sum.
+
+Example 2:
+
+Input: nums = [1,1,0,1,1]
+
+Output: 1
+
+Explanation:
+
+Delete the element nums[0] == 1, nums[1] == 1, nums[2] == 0, and nums[3] == 1. Select the entire array [1] to obtain the maximum sum.
+
+Example 3:
+
+Input: nums = [1,2,-1,-2,1,0,-1]
+
+Output: 3
+
+Explanation:
+
+Delete the elements nums[2] == -1 and nums[3] == -2, and select the subarray [2, 1] from [1, 2, 1, 0, -1] to obtain the maximum sum.
+
+ 
+
+# DAy 18
+
+## Question 1
+
+Given a 2D grid of size m x n and an integer k. You need to shift the grid k times.
+
+In one shift operation:
+
+Element at grid[i][j] moves to grid[i][j + 1].
+Element at grid[i][n - 1] moves to grid[i + 1][0].
+Element at grid[m - 1][n - 1] moves to grid[0][0].
+Return the 2D grid after applying shift operation k times.
+
+ 
+
+Example 1:
+
+
+Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1
+Output: [[9,1,2],[3,4,5],[6,7,8]]
+Example 2:
+
+
+Input: grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4
+Output: [[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]]
+Example 3:
+
+Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 9
+Output: [[1,2,3],[4,5,6],[7,8,9]]
+ 
+
+Constraints:
+
+m == grid.length
+n == grid[i].length
+1 <= m <= 50
+1 <= n <= 50
+-1000 <= grid[i][j] <= 1000
+0 <= k <= 100
+
+
+# DAy 19
+
+## Question 1
